@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="website.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Mobius</title>
+
+    <link href="Site.css" rel="stylesheet" />
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+    
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+         
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="container">
+            <div class="header">
+                
+                <h1>Mobius</h1>
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+                    <div class="container">
+                        <a class="navbar-brand" runat="server" href="~/home.aspx">Home</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Laptops.aspx">Laptops</a></li>
+                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Mobiles.aspx">Mobiles</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="main-content">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+
+            <br />
+            <br />
+            <br />
+       <div class="footer">
+    <div class="left">
+        <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Newsletter</a></li>
+        </ul>
+    </div>
+    <div class="middle">
+        <form action="#">
+            <input type="email" placeholder="Email address">
+            <button type="submit">Subscribe</button>
+            <p>About us</p>
+<p>Established in 2024,Mobius is a system integrator, providing outstanding service and quality. we deliver fast and reliably whether you need one, or a hundred systems.</p>
+        
+        </form>
+    </div>
+    <div class="right">
+        <p>Payment methods</p>
+          <div class="payment-icons">
+            <img src="visa.png" alt="Visa">
+            <img src="mastercard.png" alt="Mastercard">
+            <img src="paypal.png" alt="PayPal">
+        <p>Follow us:</p>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+    </div>
+</div>
+
+        <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/Scripts/bootstrap.js") %>
+        </asp:PlaceHolder>
+    </form>
+</body>
+</html>
